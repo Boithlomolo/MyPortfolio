@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Vumani Motloung Portfolio</title>
+    <link rel="stylesheet" href="tem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about" >About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">My Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times"onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars"onclick="openmenu()"></i>
+            </nav>
+            <div class="initial-about">
+                <div class="home-content">
+                    <h3>Hi, I'm</h3>
+                    <h1>Vumani Motloung</h1>
+                    <h3>-<span class="text"></span></h3>
+                    <p>I'm an <span>Aspiring Web Developer</span> with extensive technical skills like Html, css,
+                        JavaScript,
+                        basics of sql and oracle certified associate java developer.<br> I excel at Responsive Web
+                        Develpment
+                        and have basics in interactive UI components.</p>
+                    <div class="home-icon">
+                        <a href="#"><i class="fa-brands fa-facebook fa-beat-fade"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp fa-beat-fade"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-beat-fade"></i></a>
+                        <a href="#"><i class="fa-brands fa-github fa-beat-fade"></i></a>
+                    </div>
+                    <a href="#" class="btn-box">More About Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-img">
+                    <img src="C:\Users\boith\3D Objects\Portfolio\Images\ProfilePicture.jpg">
+                </div>
+                <div class="about-text">
+                    <h2>About<span> Me</span></h2>
+                    <h4>Front-End Developer!</h4>
+                    <p>I'm a Durban University of Technology alumnus with diploma in Information and Communication
+                        Technology-Applications Development
+                        and Oracle Certified Associate Java SE 8 programmer. I'm an aspiring Front-End Developer
+                        exceling in HTML | CSS | JavaScript as an ambitious Developer,
+                        I bring together creativity and technical expertise to craft captivating, user-centered
+                        interfaces. I'm seeking for any IT related opportunity with zero workplace experience
+                        to apply my knowledge and my skills and also upskill myself in any
+                        possible way.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('others')">Others</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2020-2023</span><br>•Diploma in ICT-Applications Development.<br>-Durban
+                                University of
+                                Technology.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="others">
+                        <ul>
+                            <li><span>Certificates:</span><br>•Introduction to IoT.<br>•OSYS101 NGD Linux
+                                Unhatched.<br>•Oracle:Java SE 8 Programmer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>•N/A</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h2 class="sub-title">My <span>Services</span></h2>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Description..</p>
+                    <a href="">learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI Design</h2>
+                    <p>Description..</p>
+                    <a href="">learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>App Development</h2>
+                    <p>Description..</p>
+                    <a href="">learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="skills">
+        <div class="container-techskills">
+            <h2 class="sub-title">My<span> Skills</span></h2>
+            <h2 class="heading1">Technical Skills</h2>
+            <div class="technical-bars">
+                <div class="bar"><i class="fa-brands fa-html5" style="color: #eb8900;"></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class="fa-brands fa-css3-alt" style="color: #74C0FC;"></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class="fa-brands fa-js" style="color: #FFD43B;"></i>
+                    <div class="info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class="fa-brands fa-java" style="color: #e00b0b;"></i>
+                    <div class="info">
+                        <span>Java</span>
+                    </div>
+                    <div class="progress-line java">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class="bx bxl-html"></i>
+                    <div class="info">
+                        <span>C#</span>
+                    </div>
+                    <div class="progress-line csharp">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class="fa-solid fa-database" style="color: #5e3131;"></i>
+                    <div class="info">
+                        <span>SQL</span>
+                    </div>
+                    <div class="progress-line sql">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-radskills">
+        <h2 class="heading1">Professional Skills</h2>
+        <div class="radial-bars">
+
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">85%</div>
+                <div class="text">Problem Solving</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">85%</div>
+                <div class="text">Communication</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">85%</div>
+                <div class="text">Analytical</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">85%</div>
+                <div class="text">Team Work</div>
+            </div>
+        </div>
+    </div>
+    <div id="project">
+        <div class="container">
+            <h2 class="sub-title">My <span>Projects</span></h2>
+            <div class="project-content">
+                <div class="pct">
+                    <img src="C:\Users\boith\OneDrive\Documentos\Projects\Portfolio\Images\SMWSP C@.png">
+                    <div class="layer">
+                        <h3>SMWSP Collection</h3>
+                        <p>-SWMSP Collection is a website that allows users to browse through it and find different type of wallpapers for desktop and mobile like pintrest and unsplash.
+                            The user can download, like and add images to my collection page, the site also have a search button, allowing the user to register an acount for premium deals.<br>
+                            •Technology Used:HTML5, CSS3, javascript.<br>
+                            •Still on development.
+                        </p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square fa-beat-fade"></i></a>
+                    </div>
+                </div>
+                <div class="pct">
+                    <img src="C:\Users\boith\OneDrive\Documentos\Projects\Portfolio\Images\Gym.png">
+                    <div class="layer">
+                        <h3>Gym Manangement </h3>
+                        <p>-Gym manangement sysytem helps an admin and user to manage their routine, plans, and other things.
+                            it allows the user to plan their things and can also buy products from the site<br>
+                            •Technology Used:HTML5, CSS3, javascript.<br>
+                            •Still on development.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square fa-beat-fade"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="pct">
+                    <img src="C:\Users\boith\3D Objects\Portfolio\Images\SMWSP Art1.png">
+                    <div class="layer">
+                        <h3>SMWSP Art</h3>
+                        <p>Description...</p>
+                        <a href=""><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div> -->
+            </div>
+            <a href=""class="seemore-btn">See More</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-text">
+                    <h2 class="sub-title">Contact<span> Me</span></h2>
+                    <p><i class="fa-solid fa-paper-plane fa-beat-fade"></i>boithlomolo@gmail.com</p>
+                    <p><i class="fa-solid fa-phone fa-beat-fade"></i>067 930 9258</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook fa-beat-fade"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp fa-beat-fade"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-beat-fade"></i></a>
+                        <a href="#"><i class="fa-brands fa-github fa-beat-fade"></i></a>
+                    </div>
+                    <a href="" download class="download-btn">Download CV</a>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" name="name" placeholder="Enter Your Name" required>
+                        <input type="email" name="email" placeholder="Enter Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Enter Your Message" required></textarea>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Developed with by Vumani Motloung © 2024</p>
+    </div>
+    <a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+    <script>
+        var typed = new typed(".text", {
+            Strings: ["Front-End Developer", "Web Developer", "Aspiring Developer"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+    </script>
+    <script>
+        var sidemn=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemn.style.right="0";
+        }
+        function closemenu(){
+            sidemn.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
