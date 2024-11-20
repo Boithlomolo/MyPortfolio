@@ -263,24 +263,34 @@ transform: translateY(-10px);
 background-color:deepskyblue;
 }
 /*Skills*/
+#skills{
+display: flex;
+justify-content: space-between;
+padding: 20px;
+}
 .container-techskills{
+flex:1;
+margin-right: 20px;
 padding: 10px 10%;
 }
 .container-radskills{
 width:600px;
 height: 500px;
 padding: 75px 90px;
-margin-left: 120px;
+margin-left: 50%;
+padding-right:-0%;
 }
 .heading1{
-text-align: center;
-margin-bottom: 50px;
+text-align:left;
+margin-bottom: 30px;
 }
 .bar{
-font-size: 23px;
+font-size: 20px;
+margin-bottom: 20px;
 }
 .technical-bars .bar{
 margin-top:40px 0;
+width:600px;
 }
 .technical-bars .bar:first-child{
 margin-top: 0;
@@ -294,18 +304,20 @@ margin-bottom: 5px;
 .technical-bars .bar .info span{
 font-size:17px;
 font-weight:500;
-animation: showText 0.5s 1s linear forwards;
-opacity:0
+/* animation: showText 0.5s 1s linear forwards; */
+opacity:1;
 }
 .technical-bars .bar .progress-line{
 position: relative;
 border-radius: 10px;
 width: 100%;
-height: 5px;
-background-color:black;
-animation: animate 1s cubic-bezier(1,0,0,5,1)forwards;
+height: 8px;
+background-color:#ccc;
+margin-top: 5px;
+overflow: hidden;
+/* animation: animate 1s cubic-bezier(1,0,0,5,1)forwards;
 transform: scaleX(0);
-transform-origin: left;  
+transform-origin: left;   */
 }
 @keyframes animate{
     100%{
@@ -313,13 +325,20 @@ transform-origin: left;
     }
 }
 .technical-bars .bar .progress-line span{
+display: block;
 height: 100%;
 background-color: deepskyblue;
 position: absolute;
 border-radius: 10px;
-animation: animate 1s 1s cubic-bezier(1,0,0,5,1)forwards;
+/* animation: animate 1s 1s cubic-bezier(1,0,0,5,1)forwards; */
+animation: grow 1s ease-in-out forwards;
 transform: scaleX(0);
 transform-origin: left; 
+}
+@keyframes grow { /*addedd by ai*/
+    100%{
+        transform: scaleX(1);
+    }
 }
 .progress-line.html span{
 width:90%;
@@ -389,14 +408,16 @@ opacity: 0;
     }
 }
 .radial-bars{
-width: 100%;
+/* width: 100%; */
 display: flex;
 flex-wrap: wrap;
-justify-content: space-evenly;
-align-items: flex-start;
+justify-content: space-between;
+gap:20px;
+/* justify-content: space-evenly; */
+/* align-items: flex-start; */
 }
-.radial-bars .radial-bar{
-width:50%;
+.radial-bar{
+width:45%;
 height: 170px;
 margin-bottom: 10px;
 position: relative;
@@ -411,7 +432,7 @@ height: 160px;
 }
 .radial-bars .radial-bar .progress-bar{
 stroke-width: 10;
-stop-color: white;
+stop-color:black;
 fill:transparent;
 stroke-dasharray: 502;
 stroke-dashoffset: 502;
@@ -548,8 +569,14 @@ flex-basis: 30%;
 .contact-form{
 flex-basis:60%;
 }
+.contact-text a{
+color:white;
+text-decoration: none;
+}
 .contact-text p{
 margin-top: 30px;
+color:white;
+text-decoration: none;
 }
 .contact-text p i{
 color:deepskyblue;
@@ -557,15 +584,24 @@ margin-right: 15px;
 font-size: 25px;
 }
 .social-icons{
-margin-top:30px;
+margin-top:20px;
 }
 .social-icons a{
 text-decoration: none;
 font-size: 30px;
 margin-right: 15px;
-color:white;
+height: 40px;
+width:40px;
+justify-content: center;
+color: deepskyblue;
 display: inline-block;
 transition: transform 0.5s;
+background: transparent;
+transition: .5s ease;
+opacity:0;
+animation: slideLeft 1s ease forwards;
+animation-delay:calc(.2s*var(--i));
+margin:30px 15px 30px 0;
 }
 .social-icons a:hover{
 color:deepskyblue;
@@ -592,7 +628,8 @@ background: transparent;
 border-radius: 20px;
 font-size: 17px;
 color:white;
-justify-content: center;
+justify-content: center; /*edit*/
+text-align: center; /*edit*/
 letter-spacing: 1px;
 text-decoration: none;
 opacity: 0;
