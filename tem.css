@@ -266,6 +266,7 @@ background-color:deepskyblue;
 #skills{
 display: flex;
 justify-content: space-between;
+align-items: flex-start;
 padding: 20px;
 }
 .container-techskills{
@@ -274,11 +275,11 @@ margin-right: 20px;
 padding: 10px 10%;
 }
 .container-radskills{
-width:600px;
+width:50%;
 height: 500px;
 padding: 75px 90px;
 margin-left: 50%;
-padding-right:-0%;
+/* padding-right: ; */
 }
 .heading1{
 text-align:left;
