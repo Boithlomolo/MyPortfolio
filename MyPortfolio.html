@@ -23,9 +23,9 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#project">My Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    <!-- <i class="fa-solid fa-xmark" onclick="closemenu()"></i> -->
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
             </nav>
             <div class="initial-about">
                 <div class="home-content">
@@ -128,9 +128,9 @@
             </div>
         </div>
     </div>
-    <div id="skills">
-        <div class="container-techskills">
-            <h2 class="sub-title">My<span> Skills</span></h2>
+    <section>
+        <div class="container1" id="skills">
+            <!-- <h2 class="sub-title">My<span> Skills</span></h2> -->
             <h2 class="heading1">Technical Skills</h2>
             <div class="technical-bars">
                 <div class="bar"><i class="fa-brands fa-html5" style="color: #eb8900;"></i>
@@ -183,47 +183,44 @@
                 </div>
             </div>
         </div>
-        <div class="container-professionalskills">
+        <div class="container1">
             <h2 class="heading1">Professional Skills</h2>
-            <div class="container-radskills">
-                <div class="radial-bars">
-
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">85%</div>
-                        <div class="text">Problem Solving</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">85%</div>
-                        <div class="text">Communication</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">85%</div>
-                        <div class="text">Analytical</div>
-                    </div>
-                    <div class="radial-bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">85%</div>
-                        <div class="text">Team Work</div>
-                    </div>
+            <div class="radial-bars">
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text">Problem Solving</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">80%</div>
+                    <div class="text">Communication</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">Analytical</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">88%</div>
+                    <div class="text">Team Work</div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div id="project">
         <div class="container">
             <h2 class="sub-title">My <span>Projects</span></h2>
@@ -309,7 +306,7 @@
     <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
     <script>
         var typed = new Typed(".text", {
-            strings: [ "Aspiring Developer","Front-End Developer", "Web Developer"],
+            strings: ["Aspiring Developer", "Front-End Developer", "Web Developer"],
             typeSpeed: 100,
             backSpeed: 100,
             backDelay: 1000,

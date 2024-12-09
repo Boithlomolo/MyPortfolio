@@ -263,35 +263,26 @@ transform: translateY(-10px);
 background-color:deepskyblue;
 }
 /*Skills*/
-#skills{
+section{
 display: flex;
-justify-content: space-between;
-align-items: flex-start;
-padding: 20px;
+flex-wrap: wrap;
 }
-.container-techskills{
-flex:1;
-margin-right: 20px;
-padding: 10px 10%;
-}
-.container-radskills{
-width:50%;
+.container1{
+width:600px;
 height: 500px;
 padding: 75px 90px;
-margin-left: 50%;
-/* padding-right: ; */
+margin-left: 120px;
 }
 .heading1{
-text-align:left;
-margin-bottom: 30px;
+text-align: center;
+margin-bottom: 50px;
 }
 .bar{
 font-size: 20px;
-margin-bottom: 20px;
 }
 .technical-bars .bar{
-margin-top:40px 0;
-width:600px;
+margin-top: 40px 0;
+width: 500px;
 }
 .technical-bars .bar:first-child{
 margin-top: 0;
@@ -303,61 +294,62 @@ margin-bottom: 0;
 margin-bottom: 5px;
 }
 .technical-bars .bar .info span{
-font-size:17px;
-font-weight:500;
-/* animation: showText 0.5s 1s linear forwards; */
-opacity:1;
+font-size: 17px;
+font-weight: 500;
+/* animation: showText 0.5s 1s linear forwards;
+opacity: 0; */
+opacity: 1;
 }
 .technical-bars .bar .progress-line{
 position: relative;
 border-radius: 10px;
 width: 100%;
-height: 8px;
-background-color:#ccc;
-margin-top: 5px;
-overflow: hidden;
-/* animation: animate 1s cubic-bezier(1,0,0,5,1)forwards;
+height: 5px;
+overflow: hidden;/*added*/
+background-color: white;
+/* animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
 transform: scaleX(0);
-transform-origin: left;   */
+transform-origin: left; */
 }
-@keyframes animate{
+@keyframes animate {
     100%{
-        transform: scaleX(1);
+    transform: scaleX(1);
     }
 }
 .technical-bars .bar .progress-line span{
-display: block;
 height: 100%;
 background-color: deepskyblue;
 position: absolute;
 border-radius: 10px;
-/* animation: animate 1s 1s cubic-bezier(1,0,0,5,1)forwards; */
-animation: grow 1s ease-in-out forwards;
+position: absolute;/*added*/
+display: block;/*added*/
+/* animation: animate 1s  1s cubic-bezier(1,0,0,5,1) forwards; */
+animation: grow 1s ease-in-out forwards;/*added*/
 transform: scaleX(0);
-transform-origin: left; 
+transform-origin: left;
 }
-@keyframes grow { /*addedd by ai*/
+@keyframes grow {/*added*/
     100%{
         transform: scaleX(1);
     }
 }
 .progress-line.html span{
-width:90%;
+width: 90%;
 }
 .progress-line.css span{
-width:90%;
-}
-.progress-line.javascript span{
-width:80%;
+width: 80%;
 }
 .progress-line.java span{
-width:90%;
+width: 75%;
 }
-.progress-line.csharp span{
-width:67%;
+.progress-line.javascript span{
+width: 68%;
 }
 .progress-line.sql span{
-width:90%;
+width: 80%;
+}
+.progress-line.csharp span{
+width: 40%;
 }
 .progress-line span::after{
 position: absolute;
@@ -365,60 +357,58 @@ padding: 1px 8px;
 background-color: black;
 color: white;
 font-size: 12px;
-border-radius: 3px;
+border-radius: 2px;
 top: -28px;
 right: -20px;
 animation: showText 0.5s 1.5s linear forwards;
 opacity: 0;
 }
 .progress-line.html span::after{
-content: "90%";
+content: "80%";
 }
 .progress-line.css span::after{
-content: "90%";
+content: "80%";    
 }
 .progress-line.javascript span::after{
-content: "90%";
+content: "80%";
 }
 .progress-line.java span::after{
-content: "90%";
-}
-.progress-line.csharp span::after{
-content: "90%";
+content: "80%";
 }
 .progress-line.sql span::after{
-content: "90%";
+content: "80%";
+}
+.progress-line.csharp span::after{
+content: "80%";
 }
 .progress-line span::before{
-content: "";
+content: " ";
 position: absolute;
 width: 0;
 height: 0;
 border: 7px solid transparent;
 border-bottom-width:0px;
 border-right-width:0px;
-border-top-color:black;
-top:-10px;
-right:0;
+border-top-color: black;
+top: -10px;
+right: 0;
 animation: showText 0.5s 1.5s linear forwards;
 opacity: 0;
 }
 @keyframes showText{
     100%{
-        opacity: 1;
-    }
+    opacity: 1;
+}
 }
 .radial-bars{
-/* width: 100%; */
+width: 100%;
 display: flex;
 flex-wrap: wrap;
-justify-content: space-between;
-gap:20px;
-/* justify-content: space-evenly; */
-/* align-items: flex-start; */
+justify-content: space-evenly;
+align-items: flex-start;
 }
-.radial-bar{
-width:45%;
+.radial-bars .radial-bar{
+width: 50%;
 height: 170px;
 margin-bottom: 10px;
 position: relative;
@@ -426,24 +416,24 @@ position: relative;
 .radial-bars .radial-bar svg{
 position: absolute;
 top:50%;
-left:50%;
+left: 50%;
 transform: translate(-50%, -50%) rotate(-90deg);
 width: 120px;
 height: 160px;
 }
 .radial-bars .radial-bar .progress-bar{
 stroke-width: 10;
-stop-color:black;
-fill:transparent;
+stop-color: black;
+fill: transparent;
 stroke-dasharray: 502;
 stroke-dashoffset: 502;
-stroke-linecap:round ;
+stroke-linecap: round;
 animation: animate-bar 1s linear forwards;
 }
 @keyframes animate-bar{
-100%{
+   100%{
     stroke-dashoffset: -1;
-}
+   } 
 }
 .path{
 stroke-width: 10;
@@ -451,49 +441,49 @@ stroke: deepskyblue;
 fill: transparent;
 stroke-dasharray: 502;
 stroke-dashoffset: 502;
-stroke-linecap:round;
+stroke-linecap: round;
 }
 .path-1{animation: animate-path1 1s 1s linear forwards;}
 .path-2{animation: animate-path2 1s 1s linear forwards;}
 .path-3{animation: animate-path3 1s 1s linear forwards;}
 .path-4{animation: animate-path4 1s 1s linear forwards;}
-@keyframes animate-path1{
+@keyframes animate-path1 {
     100%{
         stroke-dashoffset: 50;
     }
 }
-@keyframes animate-path2{
+@keyframes animate-path2 {
     100%{
-        stroke-dashoffset: 175;
+        stroke-dashoffset: 75;
     }
 }
-@keyframes animate-path3{
+@keyframes animate-path3 {
     100%{
-        stroke-dashoffset: 15;
+        stroke-dashoffset: 170;
     }
 }
-@keyframes animate-path4{
+@keyframes animate-path4 {
     100%{
-        stroke-dashoffset: 80;
+        stroke-dashoffset: 30;
     }
 }
 .radial-bar .percentage{
 position: absolute;
 top:50%;
-left:50%;
+left: 50%;
 transform: translate(-50%, -50%);
-font-size: 17px;
+font-size: -17px;
 font-weight: 500;
 animation: showText 0.5s 1s linear forwards;
 opacity: 0;
 }
 .radial-bar .text{
 width: 100%;
-text-align: center;
 position: absolute;
-bottom:-5px;
-left:50%;
-transform: translateX(-50%, -50%);
+text-align: center;
+left: 50%;
+bottom: -5px;
+transform: translateX(-50px);
 font-size: 17px;
 font-weight: 500;
 animation: showText 0.5s 1s linear forwards;
