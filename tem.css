@@ -368,24 +368,6 @@ right: -20px;
 animation: showText 0.5s 1.5s linear forwards;
 opacity: 0;
 }
-.progress-line.html span::after{
-content: "80%";
-}
-.progress-line.css span::after{
-content: "80%";    
-}
-.progress-line.javascript span::after{
-content: "80%";
-}
-.progress-line.java span::after{
-content: "80%";
-}
-.progress-line.sql span::after{
-content: "80%";
-}
-.progress-line.csharp span::after{
-content: "80%";
-}
 .progress-line span::before{
 content: " ";
 position: absolute;
@@ -482,6 +464,17 @@ font-weight: 500;
 animation: showText 0.5s 1s linear forwards;
 opacity: 0;
 }
+/* .info .rate{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: -17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+    color:red;
+} */
 .radial-bar .text{
 width: 100%;
 position: absolute;
