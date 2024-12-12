@@ -16,16 +16,17 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="" class="logo">
+                <img src="C:\Users\boith\OneDrive\Documentos\Projects\MyPortfolio\MyPortfolio\Images\Vumani.png"
+                    class="logo">
                 <ul id="sidemenu">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#project">My Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <!-- <i class="fa-solid fa-xmark" onclick="closemenu()"></i> -->
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-                <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="initial-about">
                 <div class="home-content">
@@ -56,7 +57,8 @@
         <div class="container">
             <div class="row">
                 <div class="about-img">
-                    <img src="C:\Users\boith\3D Objects\Portfolio\Images\ProfilePicture.jpg">
+                    <img
+                        src="C:\Users\boith\OneDrive\Documentos\Projects\MyPortfolio\MyPortfolio\Images\ProfilePicture.jpg">
                 </div>
                 <div class="about-text">
                     <h2>About<span> Me</span></h2>
@@ -342,12 +344,35 @@
         });
     </script>
     <script>
-        var sidemn = document.getElementById("sidemenu");
-        function openmenu() {
-            sidemn.style.right = "0";
+        const sidemenu = document.getElementById("sidemenu");
+        const barsIcon = document.querySelector(".fa-bars");
+        const xmarkIcon = document.querySelector(".fa-xmark");
+
+        function checkScreenSize() {
+            if (window.innerWidth >= 769) {
+                // Hide menu icons on desktop screens
+                if (barsIcon) barsIcon.style.display = "none";
+                if (xmarkIcon) xmarkIcon.style.display = "none";
+            } else {
+                // Show menu icons on mobile screens
+                if (barsIcon) barsIcon.style.display = "block";
+                if (xmarkIcon) xmarkIcon.style.display = "block";
+            }
         }
+
+        // Add event listener for screen resize
+        window.addEventListener("resize", checkScreenSize);
+
+        // Initial check on page load
+        checkScreenSize();
+
+        // Menu functions
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
         function closemenu() {
-            sidemn.style.right = "-200px";
+            sidemenu.style.right = "-200px";
         }
     </script>
 </body>

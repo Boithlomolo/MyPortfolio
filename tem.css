@@ -26,7 +26,8 @@ flex-wrap: wrap;
 }
 .logo{
 position: relative;
-width: 140px;
+width: 200px;
+height:auto;
 opacity:0;
 animation: slideRight 1s ease forwards;
 }
@@ -36,7 +37,7 @@ list-style: none;
 margin: 10px 20px;
 }
 nav ul li a{
-font-size:20px;
+font-size:25px;
 color:white;
 text-decoration: none;
 position: relative;
@@ -443,22 +444,22 @@ stroke-linecap: round;
 .path-4{animation: animate-path4 1s 1s linear forwards;}
 @keyframes animate-path1 {
     100%{
-        stroke-dashoffset: 50;
+        stroke-dashoffset: 90;
     }
 }
 @keyframes animate-path2 {
     100%{
-        stroke-dashoffset: 75;
+        stroke-dashoffset: 115;
     }
 }
 @keyframes animate-path3 {
     100%{
-        stroke-dashoffset: 170;
+        stroke-dashoffset: 60;
     }
 }
 @keyframes animate-path4 {
     100%{
-        stroke-dashoffset: 30;
+        stroke-dashoffset: 80;
     }
 }
 .radial-bar .percentage{
@@ -658,7 +659,7 @@ border-radius: 20px;
 font-size: 17px;
 color:white;
 background-color: deepskyblue;
-justify-content: right; /*edit*/
+justify-content: right;
 letter-spacing: 1px;
 text-decoration: none;
 opacity: 0;
@@ -761,122 +762,162 @@ border-radius: 0.5rem;
     }
 }
 /*mobile screen*/
-/* General mobile styles */
 @media (max-width: 768px) {
-    body {
-      font-size: 14px;
-    }
-  
-    nav ul li {
-      margin: 5px 10px;
-    }
-  
-    nav ul li a {
-      font-size: 16px;
-    }
-  
-    .logo {
-      width: 100px; /* Smaller logo size */
-    }
-  
-    .container {
-      padding: 10px;
-    }
-  
-    .home-content h3 {
-      font-size: 24px;
-    }
-  
-    .home-content h1 {
-      font-size: 30px;
-    }
-  
-    .home-content p {
-      font-size: 14px;
-    }
-  
-    .btn-box {
-      padding: 10px 20px;
-      font-size: 12px;
-    }
-  
-    /* About Section */
-    .about-text h2 {
-      font-size: 35px;
-    }
-  
-    .about-text h4 {
-      font-size: 16px;
-    }
-  
-    .about-text p {
-      font-size: 14px;
-    }
-  
-    .about-img {
-      flex-basis: 100%; /* Full-width image for mobile */
-      margin-bottom: 20px;
-    }
-  
-    .about-text {
-      flex-basis: 100%;
-    }
-  
-    /* Services Section */
-    .services-list {
-      grid-template-columns: 1fr; /* Single column layout */
-      grid-gap: 20px;
-    }
-  
-    .services-list div {
-      padding: 20px;
-    }
-  
-    /* Skills Section */
-    .container1 {
-      width: 100%;
-      margin-left: 0;
-      padding: 20px;
-    }
-  
-    .bar {
-      width: 100%;
-    }
-  
-    /* Projects Section */
-    .project-content {
-      grid-template-columns: 1fr; /* Single column layout */
-    }
-  
-    /* Contact Section */
-    .contact-text, .contact-form {
-      flex-basis: 100%; /* Stack on mobile */
-    }
-  
-    .contact-text p {
-      font-size: 14px;
-    }
-  
-    .social-icons a {
-      font-size: 20px;
-      height: 30px;
-      width: 30px;
-    }
-  
-    /* Footer */
-    .footer p {
-      font-size: 12px;
-    }
-  
-    /* Scroll to Top Button */
-    .top {
-      bottom: 1.5rem;
-      right: 1.5rem;
-    }
-  
-    .top i {
-      font-size: 16px;
-      padding: 8px;
-    }
-  }
-  
+body {
+font-size: 14px;
+}
+nav ul li {
+margin: 5px 10px;
+}
+nav ul li a {
+font-size: 16px;
+}
+.logo {
+width: 100px;
+}
+.container {
+padding: 10px;
+}
+.home-content h3 {
+font-size: 24px;
+}
+.home-content h1 {
+font-size: 30px;
+}
+.home-content p {
+font-size: 14px;
+}
+.btn-box {
+padding: 10px 20px;
+font-size: 12px;
+}
+.about-text h2 {
+font-size: 35px;
+}
+.about-text h4 {
+font-size: 16px;
+}
+.about-text p {
+font-size: 14px;
+}
+.about-img {
+flex-basis: 100%;
+margin-bottom: 20px;
+}
+.about-text {
+flex-basis: 100%;
+}
+.services-list {
+grid-template-columns: 1fr; /* Single column layout */
+grid-gap: 20px;
+}
+.services-list div {
+padding: 20px;
+}
+.container1 {
+width: 100%;
+margin-left: 0;
+padding: 20px;
+}
+.bar {
+width: 100%;
+}
+.project-content {
+grid-template-columns: 1fr; /* Single column layout */
+}
+.contact-text, .contact-form {
+flex-basis: 100%; 
+}
+.contact-text p {
+font-size: 14px;
+}
+.social-icons a {
+font-size: 20px;
+height: 30px;
+width: 30px;
+}
+.footer p {
+font-size: 12px;
+}
+.top {
+bottom: 1.5rem;
+right: 1.5rem;
+}
+.top i {
+font-size: 16px;
+padding: 8px;
+}
+}
+#sidemenu {
+position: fixed;
+top: 0;
+right: -200px; 
+width: 200px; 
+height: 100%;
+background-color:deepskyblue;
+color: #fff;
+box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+transition: right 0.3s ease;
+z-index: 1000;
+padding: 20px;
+display: flex;
+flex-direction: column;
+}
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+#sidemenu {
+right: -200px; /* Hidden state for mobile */
+}
+/* Menu items for better appearance */
+#sidemenu li {
+list-style: none;
+margin: 15px 0;
+}
+#sidemenu li a {
+text-decoration: none;
+color: #fff; /* Adjust as needed */
+font-size: 18px;
+transition: color 0.2s ease;
+}
+#sidemenu li a:hover {
+color: black;
+}
+.fa-bars,
+.fa-xmark{
+font-size: 24px;
+color: white; /* Adjust based on your design */
+cursor: pointer;
+position: absolute;
+top: 20px;
+right: 20px;
+z-index: 1500;
+}
+.fa-bars,
+.fa-xmark{
+display: none;
+}
+}
+/* Desktop behavior (always visible menu) */
+@media (min-width: 769px) {
+#sidemenu {
+right: 0; /* Always visible on desktop */
+position: static; /* Reset to normal position */
+width: auto;
+height: auto;
+background: none;
+box-shadow: none;
+color: inherit;
+padding: 0;
+display: flex;
+flex-direction: row;
+}
+#sidemenu li {
+margin: 0 10px;
+}
+.fa-bars {
+display: none; /* Hide hamburger menu on desktop */
+}
+.fa-xmark {
+display: none; /* Hide close icon on desktop */
+}
+}
