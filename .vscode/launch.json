@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:\\Users\\BSA TC6\\MyPortfolio\\MyPortfolio.html",
+            "url": "C:\\Users\\BSA TC6\\MyPortfolio\\index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
