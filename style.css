@@ -1030,7 +1030,7 @@ form textarea {
         padding: 8px;
     }
 }
-
+/* mobile screen */
 #sidemenu {
     position: fixed;
     top: 0;
@@ -1047,13 +1047,10 @@ form textarea {
 }
 
 /* Mobile-specific styles */
+.leave-site{
+    display: none;
+}
 @media (max-width: 768px) {
-    #sidemenu {
-        right: -200px;
-        /* Hidden state for mobile */
-    }
-
-    /* Menu items for better appearance */
     #sidemenu li {
         list-style: none;
         margin: 15px 0;
@@ -1063,7 +1060,6 @@ form textarea {
     #sidemenu li a {
         text-decoration: none;
         color:black;
-        /* Adjust as needed */
         font-size: 15px;
         transition: color 0.2s ease;
         
@@ -1073,29 +1069,35 @@ form textarea {
         color: deepskyblue;
     }
 
-    .fa-bars{
+    .fa-bars,
+    .fa-xmark{
         font-size: 24px;
         color: grey;
         cursor: pointer;
-        position: absolute;
-        top:20px;
-        right:20px;
-        z-index: 1500;
-    }
-    .fa-xmark {
-        font-size: 24px;
-        color: grey;
-        /* Adjust based on your design */
-        cursor: pointer;
-        position: absolute;
+        position: fixed;
         top: 20px;
-        left: 20px;
         z-index: 1500;
     }
 
-    .fa-bars,
-    .fa-xmark {
-        display: none;
+    .fa-bars{
+        right: 20px;
+    }
+
+    .fa-xmark{
+        right: 20px;
+        left: auto;
+    }
+    .leave-site{
+        display: block;
+        margin-top: auto;
+        padding-top: 20px;
+        border-top: 1px solid lightgrey;
+        text-align: center;
+        cursor: pointer;
+    }
+    .leave-site i{
+        font-size: 15px;
+        color:grey;
     }
 }
 
@@ -1120,13 +1122,9 @@ form textarea {
         margin: 0 10px;
     }
 
-    .fa-bars {
-        display: none;
-        /* Hide hamburger menu on desktop */
-    }
-
+    .fa-bars,
     .fa-xmark {
-        display: none;
-        /* Hide close icon on desktop */
+        display: none !important;
+        /* Hide hamburger menu on desktop */
     }
 }

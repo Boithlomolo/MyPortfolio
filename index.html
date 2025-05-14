@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-    <script type="text/javascript"src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
@@ -17,6 +17,7 @@
         <div class="container">
             <nav>
                 <img src="Images/Screenshot_20250121_163516.jpg" class="logo">
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 <ul id="sidemenu">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -24,16 +25,21 @@
                     <li><a href="#project">My Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+
+                    <!--leave site-->
+                    <div class="leave-site" onclick="leaveSite()">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </div>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="initial-about">
                 <div class="home-content">
                     <h3>Hi, I'm</h3>
                     <h1>Vumani Motloung</h1>
                     <h3>-<span class="text"></span></h3>
-                    <p>I'm an <span>Aspiring Full Stack Developer</span> with extensive technical skills like HTML5, CSS3,
-                        JavaScript, C#, React, 
+                    <p>I'm an <span>Aspiring Full Stack Developer</span> with extensive technical skills like HTML5,
+                        CSS3,
+                        JavaScript, C#, React,
                         basics of SQL and Oracle Certified Associate Java Developer.<br> I excel at Responsive Web
                         Develpment
                         and have basics in interactive UI components.</p>
@@ -76,8 +82,7 @@
                     </div>
                     <div class="tab-contents active-tab" id="education">
                         <ul>
-                            <li><span>2020-2023</span><br><a
-                                    href="Documents/Academic Transcript.pdf"
+                            <li><span>2020-2023</span><br><a href="Documents/Academic Transcript.pdf"
                                     target="_blank">•Diploma in ICT-Applications
                                     Development.</a><br>-Durban
                                 University of
@@ -91,15 +96,14 @@
                                     target="_blank">•Introduction to IoT.</a><br><a
                                     href="Documents/BoithlomoloMotloung-2020s2OSYS101lin-certificate.pdf"
                                     target="_blank">•NGD Linux
-                                    Unhatched.</a><br><a
-                                    href="Documents/eCertificate.pdf"
-                                    target="_blank">•Oracle:Java SE 8 Programmer. </a><br>
-                                    <a href="Documents/Generative AI.pdf"
-                                    target="_blank">•Career Essentials in Generative AI</a><br>
-                                    <a href="Documents/JavaScript Essential 1.pdf"
-                                    target="_blank">•JavaScript Essential 1</a><br>
-                                    <a href="Documents/JavaScript Essential 2.pdf"
-                                target="_blank">•JavaScript Essential 2</a>
+                                    Unhatched.</a><br><a href="Documents/eCertificate.pdf" target="_blank">•Oracle:Java
+                                    SE 8 Programmer. </a><br>
+                                <a href="Documents/Generative AI.pdf" target="_blank">•Career Essentials in Generative
+                                    AI</a><br>
+                                <a href="Documents/JavaScript Essential 1.pdf" target="_blank">•JavaScript Essential
+                                    1</a><br>
+                                <a href="Documents/JavaScript Essential 2.pdf" target="_blank">•JavaScript Essential
+                                    2</a>
                             </li>
                         </ul>
                     </div>
@@ -292,7 +296,8 @@
                     <img src="Images/Crypto Tracer.png">
                     <div class="layer">
                         <h3>Crypto Tracker</h3>
-                        <p>-A simple web app that tracks real-time prices of cryptocurrencies using the CoinGecko API and displays historical price charts using Chart.js.<br>
+                        <p>-A simple web app that tracks real-time prices of cryptocurrencies using the CoinGecko API
+                            and displays historical price charts using Chart.js.<br>
                             •Technology Used:HTML5, CSS3, JavaScript & CoinGecko API.<br>
                         </p>
                         <a href="https://vm-cryptotracer.netlify.app/" target="_blank" class="layer-link"><i
@@ -340,8 +345,8 @@
                         <a href="https://www.google.co.za/maps/place/Sponono+St,+Moleleki,+Katlehong,+1434/@-26.3778932,28.1691546,17z/data=!3m1!4b1!4m6!3m5!1s0x1e951c4fa04915e5:0xb0fdcfe7651954a7!8m2!3d-26.3778981!4d28.1740255!16s%2Fg%2F1tdlrp1_?hl=en&entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank" aria-label="Github"><i class="fa-solid fa-location-dot fa-beat-fade"></i>
                     </div>
-                    <a href="Documents/Vumani Motloung CV.pdf"
-                        target="_blank" download class="download-btn">View My CV</a>
+                    <a href="Documents/Vumani Motloung CV.pdf" target="_blank" download class="download-btn">View My
+                        CV</a>
                 </div>
                 <div class="contact-form">
                     <form>
@@ -375,28 +380,49 @@
         function checkScreenSize() {
             if (window.innerWidth >= 769) {
                 // Hide menu icons on desktop screens
+                if (sidemenu) sidemenu.style.rightc = "0"; //added
                 if (barsIcon) barsIcon.style.display = "none";
                 if (xmarkIcon) xmarkIcon.style.display = "none";
             } else {
                 // Show menu icons on mobile screens
+                if (sidemenu) sidemenu.style.right = "-200px"; //added
                 if (barsIcon) barsIcon.style.display = "block";
-                if (xmarkIcon) xmarkIcon.style.display = "block";
+                if (xmarkIcon) xmarkIcon.style.display = "none";
             }
         }
 
         // Add event listener for screen resize
         window.addEventListener("resize", checkScreenSize);
+        window.addEventListener("load", checkScreenSize); //added
 
         // Initial check on page load
-        checkScreenSize();
+        //checkScreenSize();//
 
         // Menu functions
         function openmenu() {
-            sidemenu.style.right = "0";
+            if (sidemenu) sidemenu.style.right = "0";
+            if (barsIcon) barsIcon.style.display = "none"; //added
+            if (xmarkIcon) xmarkIcon.style.display = "block"; //added
         }
 
         function closemenu() {
-            sidemenu.style.right = "-200px";
+            if (sidemenu) sidemenu.style.right = "-200px";
+            if (barsIcon) barsIcon.style.display = "block"; //added
+            if (xmarkIcon) xmarkIcon.style.display = "none"; //added 
+        }
+        const menuLinks = sidemenu.querySelectorAll("a");
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                if (window.innerWidth <= 768) {
+                    closemenu();
+                }
+            });
+        });
+    </script>
+    <script>
+        function leaveSite() {
+            closemenu(); 
+            window.location.href = "https://www.google.com";
         }
     </script>
 </body>
