@@ -1064,11 +1064,13 @@ form textarea {
         transition: color 0.2s ease;
         
     }
-
-    #sidemenu li a:hover {
+    #sidemenu li a.active{
         color: deepskyblue;
+        font-weight: bold;
+        border-left: 3px solid deepskyblue;
+        padding-left: 10px;
+        transition: all 0.3s ease;
     }
-
     .fa-bars,
     .fa-xmark{
         font-size: 24px;
